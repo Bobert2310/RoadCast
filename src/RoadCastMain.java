@@ -11,10 +11,10 @@ import java.util.Scanner;
 
 public class RoadCastMain {
 
-    private static final String API_KEY = "b9478773177fc290b1f32f1432103c10"; //my Api key from OPENWEATHER
-    private static final String API_URL = "https://api.openweathermap.org/data/2.5/weather"; //OPENWEATHER url
+    public static final String API_KEY = "b9478773177fc290b1f32f1432103c10";
+    public static final String API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
-    private static String selectedLocation = "No Location Selected";
+    public static String selectedLocation = "No Location Selected";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -46,18 +46,18 @@ public class RoadCastMain {
         scanner.close();
     }
 
-    private static void Welcome() {
+    public static void Welcome() {
         System.out.println("Welcome to RoadCast");
         System.out.println("Press the Enter key to continue");
     }
-    private static void pressEnter() {
+    public static void pressEnter() {
         try {
             System.in.read();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    private static int UserInput(Scanner scanner, int maxChoice) {
+    public static int UserInput(Scanner scanner, int maxChoice) {
         int choice;
 
         while (true) {
@@ -77,19 +77,41 @@ public class RoadCastMain {
 
         return choice;
     }
-    private static void changeLocationMenu(Scanner scanner) {
-        System.out.println("\nPlease Enter Your Current Location:");
+    public static void changeLocationMenu(Scanner scanner) {
+        boolean validLocation = false;
 
-        String userInputLocation = scanner.nextLine().trim();
+        while (!validLocation) {
+            System.out.println("\nPlease Enter Your Current City:");
+            String userInputLocation = scanner.nextLine().trim();
 
-        if (!userInputLocation.isEmpty()) {
-            selectedLocation = userInputLocation;
-            System.out.println("Location changed to: " + selectedLocation);
-        } else {
-            System.out.println("Invalid input. Location remains unchanged.");
+            if (!userInputLocation.isEmpty() && isValidCity(userInputLocation)) {
+                selectedLocation = userInputLocation;
+                System.out.println("Location changed to: " + selectedLocation);
+                validLocation = true;
+            } else {
+                System.out.println("Invalid city name. Please enter a valid city.");
+            }
         }
     }
-    private static void MainMenu() {
+
+    public static boolean isValidCity(String cityName) {
+        String urlString = String.format("%s?q=%s&appid=%s", API_URL, cityName, API_KEY);
+
+        try {
+            URL url = new URL(urlString);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+
+            int responseCode = connection.getResponseCode();
+
+            return responseCode == HttpURLConnection.HTTP_OK;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+
+    public static void MainMenu() {
         System.out.println("\nMain Menu:");
         System.out.println("1. RoadCast Report");
         System.out.println("2. Reset Location");
@@ -98,7 +120,7 @@ public class RoadCastMain {
     }
 
 
-    private static void roadConditionsMenu(Scanner scanner) {
+    public static void roadConditionsMenu(Scanner scanner) {
         boolean backToMainMenu = false;
 
         while (!backToMainMenu) {
@@ -120,22 +142,62 @@ public class RoadCastMain {
 
     }
 
-    private static void saveReportToFile() {
+    public static void saveReportToFile() {
         String weatherData = getWeatherData();
 
-        String filePath = "src/RoadCastReport.txt";
+        if (!weatherData.isEmpty()) {
+            String filePath = "src/RoadCastReport.txt";
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
-            writer.write(weatherData);
-            writer.newLine();
-            System.out.println("Weather report saved to " + filePath);
-        } catch (Exception e) {
-            System.out.println("Failed to save weather report. Error: " + e.getMessage());
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+                ObjectMapper objectMapper = new ObjectMapper();
+                JsonNode jsonNode = objectMapper.readTree(weatherData);
+
+                String description = jsonNode.get("weather").get(0).get("description").asText();
+                double temperature = jsonNode.get("main").get("temp").asDouble();
+                int humidity = jsonNode.get("main").get("humidity").asInt();
+                double tempCelsius = temperature - 273.15;
+
+                writer.write("Weather Conditions for " + selectedLocation + ":");
+                writer.newLine();
+                writer.write("Description: " + description);
+                writer.newLine();
+                writer.write(String.format("Temperature: %.0f°C", tempCelsius));
+                writer.newLine();
+                writer.write("Humidity: " + humidity + "%");
+                writer.newLine();
+
+                writer.write("\nTravel Recommendations:");
+                writer.newLine();
+
+                if (description.contains("rain")) {
+                    writer.write("It's raining. Drive Carefully.");
+                } else if (description.contains("snow")) {
+                    writer.write("Snow is expected / present please advise and drive safely.");
+                } else if (description.contains("few clouds")) {
+                    writer.write("Cloudy weather but dry, roads should be normal.");
+                } else if (temperature > 30) {
+                    writer.write("It's hot! I hope your air conditioning works.");
+                } else if (temperature < 0) {
+                    writer.write("It's cold. Your windscreen may need defrosted.");
+                } else {
+                    writer.write("Weather conditions are moderate. Enjoy your travel!");
+                }
+
+                writer.newLine();
+                writer.newLine();
+
+                System.out.println("Weather report saved to " + filePath);
+            } catch (Exception e) {
+                System.out.println("Failed to save weather report. Error: " + e.getMessage());
+            }
+        } else {
+            System.out.println("Weather data is empty. Unable to save report.");
         }
     }
 
 
-    private static void displayReport() {
+
+    public static void displayReport() {
         String weatherData = getWeatherData();
         try {
 
@@ -173,7 +235,7 @@ public class RoadCastMain {
         }
     }
 
-    private static String getWeatherData() {
+    public static String getWeatherData() {
         String urlString = String.format("%s?q=%s&appid=%s", API_URL, selectedLocation, API_KEY);
 
         try {
@@ -204,6 +266,4 @@ public class RoadCastMain {
             return "";
         }
     }
-
-
 }

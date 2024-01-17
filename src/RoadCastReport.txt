@@ -1,0 +1,10 @@
+{"coord":{"lon":-2.0981,"lat":57.1437},"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13n"}],"base":"stations","main":{"temp":272.31,"feels_like":266.81,"temp_min":272.15,"temp_max":272.42,"pressure":997,"humidity":94},"visibility":10000,"wind":{"speed":5.66,"deg":280},"snow":{"1h":0.25},"clouds":{"all":31},"dt":1705534421,"sys":{"type":1,"id":1440,"country":"GB","sunrise":1705480475,"sunset":1705507291},"timezone":0,"id":2657832,"name":"Aberdeen","cod":200}
+
+Weather Conditions for Aberdeen:
+Description: light snow
+Temperature: -1°C
+Humidity: 94%
+
+Travel Recommendations:
+Snow is expected / present please advise and drive safely.
+

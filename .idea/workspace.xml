@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97ea7f5a-e7cb-4542-8fa7-bd69f605c126" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RoadCast.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RoadCastMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RoadCastReport.txt" afterDir="false" />
+    <list default="true" id="97ea7f5a-e7cb-4542-8fa7-bd69f605c126" name="Changes" comment="Project Upload">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RoadCast.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RoadCast.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoadCastMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoadCastMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoadCastReport.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoadCastReport.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +18,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2b62sngUxHTZS6CGzX5QrHwXBhq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,7 +39,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
@@ -68,11 +63,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705521422218</updated>
-      <workItem from="1705521423250" duration="328000" />
+      <workItem from="1705521423250" duration="2507000" />
+      <workItem from="1705533620862" duration="1563000" />
     </task>
+    <task id="LOCAL-00001" summary="Project Upload">
+      <option name="closed" value="true" />
+      <created>1705521872665</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705521872665</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project Upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project Upload" />
   </component>
 </project>
