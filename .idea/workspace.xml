@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="97ea7f5a-e7cb-4542-8fa7-bd69f605c126" name="Changes" comment="Project Upload">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RoadCast.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RoadCast.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RoadCastMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoadCastMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RoadCastReport.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoadCastReport.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,23 +24,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/scott/IdeaProjects/jackson-databind-2.16.1.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/scott/IdeaProjects/jackson-databind-2.16.1.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\scott\IdeaProjects\RoadCast" />
@@ -64,7 +61,9 @@
       <option name="presentableId" value="Default" />
       <updated>1705521422218</updated>
       <workItem from="1705521423250" duration="2507000" />
-      <workItem from="1705533620862" duration="1563000" />
+      <workItem from="1705533620862" duration="1858000" />
+      <workItem from="1705535506555" duration="1000" />
+      <workItem from="1705536976284" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="Project Upload">
       <option name="closed" value="true" />
@@ -74,7 +73,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705521872665</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Project Upload">
+      <option name="closed" value="true" />
+      <created>1705535272079</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705535272079</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
